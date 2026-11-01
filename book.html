@@ -1,0 +1,101 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Book Now | Wildheart Jungle Safari</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="top">
+        <nav>
+            <a class="brand" href="index.html">WILDHEART</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="safaris.html">Safaris</a>
+            <a href="book.html">Book Now</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="page form-page">
+        <p class="eyebrow">Book now</p>
+        <h1>Start your safari application.</h1>
+        <p>Complete the form and we will contact you shortly.</p>
+
+        <form id="booking-form" data-type="booking">
+
+            <input
+                type="text"
+                name="Full name"
+                placeholder="Full name"
+                required
+            >
+
+            <input
+                type="email"
+                name="Email"
+                placeholder="Email address"
+                required
+            >
+
+            <input
+                type="tel"
+                name="Phone"
+                placeholder="Phone number"
+                required
+            >
+
+            <label for="travel-date">Travel date</label>
+            <input
+                type="date"
+                id="travel-date"
+                name="Travel date"
+                required
+            >
+
+            <input
+                type="number"
+                name="Guests"
+                min="1"
+                placeholder="Number of guests"
+                required
+            >
+
+            <select name="Safari package" required>
+                <option value="">Select a package</option>
+                <option value="Forest Explorer">Forest Explorer</option>
+                <option value="Wildheart Weekend">Wildheart Weekend</option>
+                <option value="Grand Jungle Journey">Grand Jungle Journey</option>
+            </select>
+
+            <textarea
+                name="Message"
+                placeholder="Tell us about your plans"
+            ></textarea>
+
+            <button class="button" type="submit">
+                Submit dossier
+            </button>
+
+            <p class="result" id="booking-result" aria-live="polite"></p>
+
+        </form>
+    </section>
+
+    <footer>
+        © 2026 Wildheart Jungle Safari ·
+        <a href="mailto:sundaramsubashree@gmail.com">
+            sundaramsubashree@gmail.com
+        </a>
+    </footer>
+
+    <!-- Load Supabase before your own JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
